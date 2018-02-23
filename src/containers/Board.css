@@ -1,0 +1,11 @@
+.Board > .row {
+  display: flex;
+}
+
+.App {
+  text-align: center;
+}
+
+.App > .Board {
+  display: inline-block;
+}
