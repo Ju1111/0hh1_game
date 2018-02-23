@@ -1,3 +1,10 @@
+.App {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+}
+
 .App h1 {
+  flex: 1;
   text-align: center;
 }

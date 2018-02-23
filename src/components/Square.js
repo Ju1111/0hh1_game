@@ -6,7 +6,8 @@ import './Square.css'
 class Square extends PureComponent {
   render () {
     return (
-      <div className="square" />
+      <div className="Square">
+      </div>
     )
   }
 }
