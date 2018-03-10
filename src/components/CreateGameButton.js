@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import './CreateGameButton.css'
+import { connect } from 'react-redux'
+import { createGame } from '../actions/game'
 
 export class CreateGameButton extends PureComponent {
   static propTypes = {
@@ -8,7 +10,7 @@ export class CreateGameButton extends PureComponent {
   }
 
   handleClick = () => {
-    this.props.createGame(1)
+    this.props.createGame(6)
   }
 
   render() {
@@ -23,4 +25,4 @@ export class CreateGameButton extends PureComponent {
   }
 }
 
-export default CreateGameButton
+export default connect(null, { createGame })(CreateGameButton)

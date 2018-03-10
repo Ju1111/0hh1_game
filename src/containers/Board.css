@@ -1,5 +1,5 @@
 .BoardGame {
   display: flex;
-  width: 498px;
-  margin: 50px auto;
+  width: auto;
+  margin: 30px auto;
 }

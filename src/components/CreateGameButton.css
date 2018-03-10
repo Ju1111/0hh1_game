@@ -3,7 +3,15 @@
   border: 1px solid #9E0215;
   border-radius: 3px;
   color: #fff;
-  padding: 5px 10px;
+  padding: 5px;
+  width: 10px auto;
+  height: 5%;
+  text-align: center;
+  cursor: pointer;
+  margin: 0.5em auto;
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 30px;
 }
 
 .CreateGameButton:hover {
