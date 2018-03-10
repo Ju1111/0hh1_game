@@ -3,12 +3,15 @@ import PropTypes from 'prop-types'
 import Square from '../components/Square'
 import './Board.css'
 import { connect } from 'react-redux'
+import { duplicateCols, duplicateRows } from '../lib/game'
 
 export class Board extends PureComponent {
   static propTypes = {
     board: PropTypes.arrayOf(
       PropTypes.arrayOf(PropTypes.number)
-    ).isRequired
+    ).isRequired,
+    dupeRows: PropTypes.arrayOf(PropTypes.number),
+    dupeCols: PropTypes.arrayOf(PropTypes.number)
   }
 
   renderRow = (row, index) => {
@@ -20,12 +23,15 @@ export class Board extends PureComponent {
   }
 
   renderSquare = rowIndex => (value, index) => {
+    const { dupeRows, dupeCols } = this.props
+    const dupe = dupeCols.includes(index) || dupeRows.includes(rowIndex)
     return (
       <Square
-        key={index}
-        value={value}
-        x={index}
-        y={rowIndex}
+        key={ index }
+        value={ value }
+        dupe={ dupe }
+        x={ index }
+        y={ rowIndex }
       />
     )
   }
@@ -39,7 +45,7 @@ export class Board extends PureComponent {
   }
 }
 
-const mapStateToProps = ({ board }) => ({ board })
+const mapStateToProps = ({ board }) => ({ board, dupeRows: duplicateRows(board), dupeCols: duplicateCols(board) })
 
 
 export default connect(mapStateToProps)(Board)

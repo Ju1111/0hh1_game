@@ -8,16 +8,33 @@
   background-color: white;
 }
 
+
 .Square.fill-1 {
   background-color: #c22832;
   /* background-image: url("heart.png"); */
   background-size: contain;
 }
 
+.Square.fill-1.locked {
+  background-color: #941e26;
+}
+
+.Square.fill-1.dupe {
+  border: 2.5px solid #ffff00;
+}
+
 .Square.fill-2 {
   background-color: #52b084;
   background-image: url("shamrock.png");
   background-size: contain;
+}
+
+.Square.fill-2.locked {
+  background-color: #408c69;
+}
+
+.Square.fill-2.dupe {
+  border: 2.5px solid #ffff00;
 }
 
 .Square:hover {
