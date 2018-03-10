@@ -9,9 +9,17 @@
 }
 
 .Square.fill-1 {
-  background-color: #ce0033;
+  background-color: #c22832;
+  /* background-image: url("heart.png"); */
+  background-size: contain;
 }
 
 .Square.fill-2 {
-  background-color: #00b386;
+  background-color: #52b084;
+  background-image: url("shamrock.png");
+  background-size: contain;
+}
+
+.Square:hover {
+  cursor: pointer;
 }
