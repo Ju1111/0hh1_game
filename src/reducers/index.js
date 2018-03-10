@@ -3,5 +3,5 @@ import sidebar from './sidebar'
 import locked from './locked'
 
 export default {
- board,sidebar,locked
+ board, locked, sidebar
 }

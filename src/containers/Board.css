@@ -1,3 +1,5 @@
-.Board > .row {
+.BoardGame {
   display: flex;
+  width: 498px;
+  margin: 50px auto;
 }

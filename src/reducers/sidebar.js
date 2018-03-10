@@ -1,3 +1,7 @@
-export default (state = { open: true }, { type, payload } = {}) => {
+const initialState = {
+  open: true
+}
+
+export default (state = initialState, { type, payload } = {}) => {
   return state
 }
