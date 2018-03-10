@@ -8,8 +8,11 @@ class Square extends PureComponent {
   }
 
   render () {
+    const { value } = this.props
     return (
-      <div className="Square" value={this.props.value} />
+      <div
+     className={`Square fill-${value || 0}`}
+   />
     )
   }
 }
