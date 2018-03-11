@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { boardHasErrors } from '../lib/game'
+import { gameFinished } from '../lib/game'
 import { connect } from 'react-redux'
 import CreateGameButton from './CreateGameButton'
 import './GameFinished.css'
@@ -30,6 +30,6 @@ export class Finished extends PureComponent {
   }
 }
 
-const mapStateToProps = ({ board }) => ({ wrong: boardHasErrors(board) })
+const mapStateToProps = ({ board }) => ({ wrong: !gameFinished(board) })
 
 export default connect(mapStateToProps)(Finished)

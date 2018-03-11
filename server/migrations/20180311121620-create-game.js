@@ -8,16 +8,13 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      row: {
-        type: Sequelize.INTEGER
-      },
-      column: {
-        type: Sequelize.INTEGER
-      },
-      value: {
-        type: Sequelize.INTEGER
+      board: {
+        type: Sequelize.ARRAY(Sequelize.TEXT)
       },
       locked: {
+        type: Sequelize.ARRAY(Sequelize.TEXT)
+      },
+      sidebar: {
         type: Sequelize.BOOLEAN
       },
       createdAt: {

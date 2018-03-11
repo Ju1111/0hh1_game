@@ -12,7 +12,7 @@ export class Progress extends PureComponent {
   render() {
     return(
       <div class="Progress">
-        <p>Progress: {this.props.progress}%</p>
+        <p>Progress: <progress value={this.props.progress} max="100" /></p>
       </div>
     )
   }

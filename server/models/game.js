@@ -1,10 +1,9 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var Game = sequelize.define('Game', {
-    row: DataTypes.INTEGER,
-    column: DataTypes.INTEGER,
-    value: DataTypes.INTEGER,
-    locked: DataTypes.BOOLEAN
+    board: DataTypes.ARRAY,
+    locked: DataTypes.ARRAY,
+    sidebar: DataTypes.BOOLEAN
   }, {
     timestamps: false
   });

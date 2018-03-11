@@ -1,14 +1,15 @@
 .Finished {
   background-color: rgba(0,0,0,.3);
   display: flex;
-  /* top: 0;
-  bottom: 0; */
-  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   position: absolute;
-  width: 100%;
   z-index: 99;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .Finished .message {
