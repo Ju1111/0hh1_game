@@ -11,7 +11,8 @@ class Square extends PureComponent {
     x: PropTypes.number.isRequired,
     y: PropTypes.number.isRequired,
     locked: PropTypes.bool.isRequired,
-    dupe: PropTypes.bool
+    dupe: PropTypes.bool,
+    error: PropTypes.bool
   }
 
   handleClick = () => {
@@ -20,12 +21,13 @@ class Square extends PureComponent {
   }
 
   changeName = () => {
-    const { value, locked, dupe } = this.props
+    const { value, locked, dupe, error } = this.props
     let classnames = ['Square']
 
     classnames.push(`fill-${value || 0}`)
     if (locked) classnames.push('locked')
     if (dupe) classnames.push('dupe')
+    if (error) classnames.push('error')
 
     return classnames.join(' ')
   }
