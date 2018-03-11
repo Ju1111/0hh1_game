@@ -6,7 +6,13 @@
   "repository": "https://github.com/Ju1111/0hh1_game",
   "author": "Julia Schneider",
   "license": "MIT",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon --inspect .",
+    "sequelize": "node_modules/.bin/sequelize"
+  },
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "pg": "6",
     "sequelize": "^4.36.0",

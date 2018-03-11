@@ -9,10 +9,10 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       board: {
-        type: Sequelize.ARRAY(Sequelize.TEXT)
+        type: Sequelize.STRING
       },
       locked: {
-        type: Sequelize.ARRAY(Sequelize.TEXT)
+        type: Sequelize.STRING
       },
       sidebar: {
         type: Sequelize.BOOLEAN

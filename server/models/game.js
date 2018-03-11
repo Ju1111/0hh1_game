@@ -1,8 +1,8 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var Game = sequelize.define('Game', {
-    board: DataTypes.ARRAY,
-    locked: DataTypes.ARRAY,
+    board: DataTypes.STRING,
+    locked: DataTypes.STRING,
     sidebar: DataTypes.BOOLEAN
   }, {
     timestamps: false
